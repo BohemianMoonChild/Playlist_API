@@ -44,4 +44,4 @@ const librarySchema = mongoose.Schema({
 
 
 
-module.exports = mongoose.model('PLAYLIST_API', librarySchema)
+module.exports = mongoose.model('Library', librarySchema)

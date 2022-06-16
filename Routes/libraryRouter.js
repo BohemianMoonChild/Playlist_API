@@ -3,7 +3,7 @@ const express = require('express')
 
 //===IMPORT SCHEMA===
 // const playlistModel = require('../Models/playListSchema')
-// const authMiddleware = require('../Middleware/authMiddleware')
+const authMiddleware = require('../Middleware/authMiddleware')
 const libraryModel = require('../Models/librarySchema')
 
 
@@ -12,7 +12,7 @@ const router = express.Router()
 
 
 //===GET/LIBRARY FROM THE ROUTE===
-router.get('/', authMiddleware, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const library = await libraryModel.find()
         res.status(200).json(library)
@@ -24,7 +24,7 @@ router.get('/', authMiddleware, async (req, res) => {
 
 
 //===CREATE LIBRARY===
-router.post('/', authMiddleware, async (req, res) => {
+router.post('/', async (req, res) => {
     const libraryData = req.body
     console.log(libraryData);
 
@@ -36,6 +36,23 @@ router.post('/', authMiddleware, async (req, res) => {
     } catch (error) {
         console.error(error)
         res.status(400).json('Warning; Bad request!!!')
+        
+    }
+})
+
+
+//===ADD SONG TO LIBRARY DATABASE===
+router.post('/addSong/:id', async (req, res) => {
+    const id = req.params.id
+    const newSongData = req.body
+
+    try {
+        const library = await libraryModel.findById(id)
+        library.songs.push(newSongData)
+        await library.save()
+        res.json(library)
+    } catch (error) {
+        console.log(error)
         
     }
 })
