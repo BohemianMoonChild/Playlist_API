@@ -1,6 +1,6 @@
 //===IMPORT===
 const express = require('express')
-require('dotenv').config()
+require('dotenv').config() //initialize dotenv
 const morgan = require('morgan')
 const helmet = require('helmet')
 
@@ -13,7 +13,7 @@ const libraryRouter = require('./Routes/libraryRouter')
 
 //===IMPORT ROUTER===
 const app = express()
-const PORT = 6000
+const PORT = process.env.PORT || 6000 //process.env.PORT connects to Heroku
 console.log("hello world")
 
 

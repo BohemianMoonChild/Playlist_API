@@ -98,13 +98,13 @@ router.post('/addSong/:id', authMiddleware, async (req, res) => {
     }
 })
 
-//===DELETE A PLAYLIST===
-router.delete('/:id', authMiddleware, async (req, res) => {
+//===DELETE A SONG FROM PLAYLIST===
+router.delete('/deleteSong/:id', authMiddleware, async (req, res) => {
     const id = req. params.id
 
     try {
         const playList = await playlistModel.findByIdAndDelete(id)
-        res.status(202).json({msg: "Playlist was deleted!"})
+        res.status(202).json({msg: "Song was removed from playlist!"})
     } catch (error) {
         console.log(error);
         
