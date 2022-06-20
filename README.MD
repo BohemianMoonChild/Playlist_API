@@ -1,3 +1,5 @@
+<body style=background-color: black,
+font=color: white>
 <h1>PLAYLIST API</h1>
 <p>A <b>Playlist API</b> that allows for the owner to create a <b>Database</b> of music collections. Users are able to create an account for themselves. After creating an account, users will then be able to create their own <b>Playlist</b> and then add songs from the <b>database collection</b>.</p>
 <br>
@@ -21,7 +23,7 @@
 <br>
 <h2>To run my project locally, you must have the following dependencies intstalled.</h2>
 <h3>To install dependencies</h3>
-<p>npm init -y</p>
+<p><i>npm init -y</i></p>
 <p>npm i:</p>
 <ul>
 <li>express</li>
@@ -38,7 +40,6 @@
 <br>
 <h2>Routes</h2>
 <p>server -app.get('/) returns message ""Welcome 'My Songs Crate' where you create your own playlists collections!!!"</p>
-<br>
 <h2>Auth Router ('/auth') creates Users and Login</h2>
 <ul>
 <li>Router.post: Create's a new user</li>
@@ -67,8 +68,8 @@
 </ul>
 <br>
 <h2>Library Schema (data library)</h2>
+<b>songs:</b>
 <ul>
-<li><b>songs:</b></li>
 <li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,<li>
 <li><b>artist:</b> <b>type:</b> Sring, <b>required:</b> true,</li>
 <li><b>year:</b> <b>type:</b> Number, <b>required:</b> true,</li>
@@ -78,9 +79,9 @@
 </ul>
 <br>
 <h2>Playlist Schema</h2>
+<b>PlayList Name:</b>
+<b>songs:</b>
 <ul>
-<li><b>PlayList Name:</b></li>
-<li><b>songs:</b></li>
 <li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,<li>
 <li><b>artist:</b> <b>type:</b> Sring, <b>required:</b> true,</li>
 <li><b>year:</b> <b>type:</b> Number, <b>required:</b> true,</li>
@@ -92,6 +93,6 @@
 </ul>
 <br>
 <h1>Middeware</h1>
-jwtverify: gets token from Header in Postman and matches token sent.
+<b>jwtverify:</b> gets token from <b>Header</b> in <b>Postman</b> and matches token sent.
 <br>
-authrouter: uses login fuction to verify user is logged in order to post/create playlist. If password/username do not match, a 400 error will be sent.
+<b>authrouter:</b> uses login fuction to verify user is logged in order to post/create playlist. If password/username do not match, a 400 error will be sent.
