@@ -1,31 +1,26 @@
 <h1>PLAYLIST API</h1>
-<br>
-<br>
-<p>A Playlist API that allows for the owner to create a Database of music collections. Users are able to create an account for themselves. After creating an account, users will then be able to create their own Playlist and then add songs from the database collection.</p>
-<br>
+<p>A <b>Playlist API</b> that allows for the owner to create a <b>Database</b> of music collections. Users are able to create an account for themselves. After creating an account, users will then be able to create their own <b>Playlist</b> and then add songs from the <b>database collection</b>.</p>
 <br>
 <p>The Playlist API protects users' password via hashing and set requirements of unique emails and usernames when registering and logging in.
 <br>
 <br>
 <h2>Tech Stack</h2>
+<b>Server:</b> Node, Express 
 <br>
-<b>Server:</b> Node, Express
 <b>Database:</b> Mongo
+<br>
 <b>Tools:</b> Mongo
 <br>
 <br>
 <h2>Envoronment Variables</h2>
-<br>
 <p>Running this project requires the addition to these environment on your .env file:</p>
 <ul>
 <li>MONGODB_URI</li>
 <li>JWT_SECRET</li>
 </ul>
 <br>
-<br>
 <h2>To run my project locally, you must have the following dependencies intstalled.</h2>
-<br>
-<h3>To install dependencies<h/h3>
+<h3>To install dependencies</h3>
 <p>npm init -y</p>
 <p>npm i:</p>
 <ul>
@@ -44,11 +39,10 @@
 <h2>Routes</h2>
 <p>server -app.get('/) returns message ""Welcome 'My Songs Crate' where you create your own playlists collections!!!"</p>
 <br>
-<br>
 <h2>Auth Router ('/auth') creates Users and Login</h2>
 <ul>
 <li>Router.post: Create's a new user</li>
-<li>
+</ul>
 
 
 <h2>User Router</h2>
@@ -62,45 +56,40 @@
 
 
 <h1>Schemas</h1>
-<br>
-<br>
 <h2>User Route Schema:</h2>
 <ul>
-<li>username: type: String, required: true,</li>
-<li>email: type: String, required: true,</li>
-<li>birthday: type: Data, required: true,</li>
-<li>age: type: Number, required: true,</li>
-<li>password: type: String, required: true,</li>
-<li>createdat: type: Data, Default</li>
+<li><b>username:</b> <b>type:</b> String, <b>required:</b> true,</li>
+<li><b>email:</b> <b>type:</b> String, <b>required:</b> true,</li>
+<li><b>birthday:</b> <b>type:</b> Data, <b>required:</b> true,</li>
+<li><b>age:</b> <b>type:</b> Number, <b>required:</b> true,</li>
+<li><b>password:</b> <b>type:</b> String, <b>required:</b> true,</li>
+<li><b>createdat:</b> <b>type:</b> Data, Default</li>
 </ul>
-<br>
 <br>
 <h2>Library Schema (data library)</h2>
 <ul>
-<li>songs:</li>
-<li>songTitle: type: String, required: true,<li>
-<li>artist: type: Sring, required: true,</li>
-<li>year: type: Number, required: true,</li>
-<li>genre: type: String, required: true,</li>
-<li>duration: type: Number, required: false,</li>
-<li>fileType: type: String, required: true</li>
+<li><b>songs:</b></li>
+<li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,<li>
+<li><b>artist:</b> <b>type:</b> Sring, <b>required:</b> true,</li>
+<li><b>year:</b> <b>type:</b> Number, <b>required:</b> true,</li>
+<li><b>genre:</b> <b>type:</b> String, <b>required:</b> true,</li>
+<li><b>duration:</b> <b>type:</b> Number, <b>required:</b> false,</li>
+<li><b>fileType:</b> <b>type:</b> String, <b>required:</b> true</li>
 </ul>
-<br>
 <br>
 <h2>Playlist Schema</h2>
 <ul>
-<li>PlayList Name:</li>
-<li>songs:</li>
-<li><li>songTitle: type: String, required: true,<li>
-<li>artist: type: Sring, required: true,</li>
-<li>year: type: Number, required: true,</li>
-<li>genre: type: String, required: true,</li>
-<li>duration: type: Number, required: false,</li>
-<li>fileType: type: String, required: true,</li>
-<li>private: type: Boolean, required: false,</li>
-<li>createdat: type: Data, Default</li>
+<li><b>PlayList Name:</b></li>
+<li><b>songs:</b></li>
+<li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,<li>
+<li><b>artist:</b> <b>type:</b> Sring, <b>required:</b> true,</li>
+<li><b>year:</b> <b>type:</b> Number, <b>required:</b> true,</li>
+<li><b>genre:</b> <b>type:</b> String, <b>required:</b> true,</li>
+<li><b>duration:</b> <b>type:</b> Number, <b>required:</b> false,</li>
+<li><b>fileType:</b> <b>type:</b> String, <b>required:</b> true,</li>
+<li><b>private:</b> <b>type:</b> Boolean, <b>required:</b> false,</li>
+<li><b>createdat:</b> <b>type:</b> Data, Default</li>
 </ul>
-<br>
 <br>
 <h1>Middeware</h1>
 jwtverify: gets token from Header in Postman and matches token sent.
