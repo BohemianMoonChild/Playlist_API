@@ -1,6 +1,4 @@
-<body style=background-color: black,
-font=color: white>
-<h1>PLAYLIST API</h1>
+<h1 align="center"> PLAYLIST API</h1>
 <p>A <b>Playlist API</b> that allows for the owner to create a <b>Database</b> of music collections. Users are able to create an account for themselves. After creating an account, users will then be able to create their own <b>Playlist</b> and then add songs from the <b>database collection</b>.</p>
 <br>
 <p>The Playlist API protects users' password via hashing and set requirements of unique emails and usernames when registering and logging in.
