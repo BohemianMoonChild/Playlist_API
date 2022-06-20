@@ -32,7 +32,7 @@ app.use('/library', libraryRouter)
 
 //===ROOT ROUTE FOR APP===
 app.get('/', (req, res) => {
-    res.status(200).json("Welcome to my API that I haven't yet figured out!!!")
+    res.status(200).json("Welcome 'My Songs Crate' where you create your own playlists collections!!!")
 })
 
 

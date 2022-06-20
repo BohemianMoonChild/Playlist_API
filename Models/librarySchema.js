@@ -23,7 +23,7 @@ const librarySchema = mongoose.Schema({
     
         genre: {
             type: String,
-            required: false
+            required: true,
         },
     
         duration: {
