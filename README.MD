@@ -35,7 +35,6 @@
 <li>jsonwebtoken</li>
 </ul>
 <br>
-<br>
 <h2>Routes</h2>
 <p>server -app.get('/) returns message ""Welcome to 'My Songs Crate' where you create your own collection of playlists!!!"</p>
 <h2>Auth Router ('/auth') creates Users and Login</h2>
@@ -74,7 +73,7 @@
 <h2>Library Schema (data library)</h2>
 <b>songs:</b>
 <ul>
-<li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,<li>
+<li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,</li>
 <li><b>artist:</b> <b>type:</b> Sring, <b>required:</b> true,</li>
 <li><b>year:</b> <b>type:</b> Number, <b>required:</b> true,</li>
 <li><b>genre:</b> <b>type:</b> String, <b>required:</b> true,</li>
@@ -86,7 +85,7 @@
 <b>PlayList Name:</b>
 <b>songs:</b>
 <ul>
-<li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,<li>
+<li><b>songTitle:</b> <b>type:</b> String, <b>required:</b> true,</li>
 <li><b>artist:</b> <b>type:</b> Sring, <b>required:</b> true,</li>
 <li><b>year:</b> <b>type:</b> Number, <b>required:</b> true,</li>
 <li><b>genre:</b> <b>type:</b> String, <b>required:</b> true,</li>
