@@ -40,24 +40,24 @@
 <h2>Auth Router ('/auth') creates Users and Login</h2>
 <h2>User Router</h2>
 <ul>
-<li>Router.post: Creates/Registers a new user via AuthSchema; password is hashed</li>
-<li>userRouter.post: User logs in with username and password. Token is sent for further access</li>
-<li>userRouter.get: the endpoint; finds all of the users. User protected with tokens</li>
+<li><b>Router.post:</b> Creates/Registers a new user via AuthSchema; password is hashed</li>
+<li><b>userRouter.post:</b> User logs in with username and password. Token is sent for further access</li>
+<li><b>userRouter.get:</b> the endpoint; finds all of the users. User protected with tokens</li>
 </ul>
 
 <h2>Library Data/Router</h2>
 <ul>
-<li>/library - creates a new library with a unique id</li>
-<li>/addSong/id - adds a song to the library database</li>
-<li>.get /library - gets/calls the library database with songs listed within an array</li>
+<li><b>/library</b> - creates a new library with a unique id</li>
+<li><b>/addSong/id</b> - adds a song to the library database</li>
+<li><b>.get /library</b> - gets/calls the library database with songs listed within an array</li>
 </ul>
 
 <h2>Playlist/Router</h2>
 <ul>
-<li>user/playlist - creates a new playlist with name of playlist created by the user</li>
-<li>user/playlist/addSong/id - adds a song to the playlist via id of playlist created</li>
-<li>.get /playlist/id - gets the playlist via id</li>
-
+<li><b>user/playlist</b> - creates a new playlist with name of playlist created by the user</li>
+<li><b>user/playlist/addSong/id</b> - adds a song to the playlist via id of playlist created</li>
+<li><b>.get /playlist/id</b> - gets the playlist via id</li>
+</ul>
 
 <h1>Schemas</h1>
 <h2>User Route Schema:</h2>
