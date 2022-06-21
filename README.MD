@@ -1,4 +1,4 @@
-<h1 align="center"> PLAYLIST API</h1>
+<h1 align="center"> PLAYLIST API (My Songs Crate)</h1>
 <p>A <b>Playlist API</b> that allows for the owner to create a <b>Database</b> of music collections. Users are able to create an account for themselves. After creating an account, users will then be able to create their own <b>Playlist</b> and then add songs from the <b>database collection</b>.</p>
 <br>
 <p>The Playlist API protects users' password via hashing and set requirements of unique emails and usernames when registering and logging in.
@@ -12,8 +12,8 @@
 <b>Tools:</b> Mongo
 <br>
 <br>
-<h2>Envoronment Variables</h2>
-<p>Running this project requires the addition to these environment on your .env file:</p>
+<h2>Environment Variables</h2>
+<p>Running this project requires the addition to these environments on your .env file:</p>
 <ul>
 <li>MONGODB_URI</li>
 <li>JWT_SECRET</li>
@@ -37,21 +37,27 @@
 <br>
 <br>
 <h2>Routes</h2>
-<p>server -app.get('/) returns message ""Welcome 'My Songs Crate' where you create your own playlists collections!!!"</p>
+<p>server -app.get('/) returns message ""Welcome to 'My Songs Crate' where you create your own collection of playlists!!!"</p>
 <h2>Auth Router ('/auth') creates Users and Login</h2>
+<h2>User Router</h2>
 <ul>
-<li>Router.post: Create's a new user</li>
+<li>Router.post: Creates/Registers a new user via AuthSchema; password is hashed</li>
+<li>userRouter.post: User logs in with username and password. Token is sent for further access</li>
+<li>userRouter.get: the endpoint; finds all of the users. User protected with tokens</li>
 </ul>
 
-
-<h2>User Router</h2>
-
-
 <h2>Library Data/Router</h2>
-
-
+<ul>
+<li>/library - creates a new library with a unique id</li>
+<li>/addSong/id - adds a song to the library database</li>
+<li>.get /library - gets/calls the library database with songs listed within an array</li>
+</ul>
 
 <h2>Playlist/Router</h2>
+<ul>
+<li>user/playlist - creates a new playlist with name of playlist created by the user</li>
+<li>user/playlist/addSong/id - adds a song to the playlist via id of playlist created</li>
+<li>.get /playlist/id - gets the playlist via id</li>
 
 
 <h1>Schemas</h1>
@@ -94,3 +100,9 @@
 <b>jwtverify:</b> gets token from <b>Header</b> in <b>Postman</b> and matches token sent.
 <br>
 <b>authrouter:</b> uses login fuction to verify user is logged in order to post/create playlist. If password/username do not match, a 400 error will be sent.
+
+<h2>Upcoming Features</h2>
+<ul>
+<li>More Routes</li>
+<li>Swagger</li>
+</ul>
