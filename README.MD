@@ -9,7 +9,7 @@
 <br>
 <b>Database:</b> Mongo
 <br>
-<b>Tools:</b> Mongo
+<b>Tools:</b> Postman, Heroku
 <br>
 <br>
 <h2>Environment Variables</h2>
